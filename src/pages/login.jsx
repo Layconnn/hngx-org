@@ -60,6 +60,28 @@ function Login() {
     }
   };
 
+  const resetEmailErrors = () => {
+    setEmailError("");
+  };
+
+  const resetPassWordError = () => {
+    setPasswordError("");
+  }
+
+  const handleEmailChange = (e) => {
+    resetEmailErrors();
+    if (e.target.name === "email") {
+      setEmail(e.target.value);
+    }
+  }
+
+  const handlePasswordChange = (e) => {
+    resetPassWordError(); 
+    if (e.target.name === "password") {
+      setPassword(e.target.value);
+    }
+  };
+
   return (
     <>
       <div className="details">
@@ -71,7 +93,7 @@ function Login() {
               name="email"
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
               h5="Email"
             />
             {emailError && <div className="error-message">{emailError}</div>}
@@ -82,7 +104,7 @@ function Login() {
               name="password"
               type="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={handlePasswordChange}
               h5="Password"
             />
             {passwordError && (
