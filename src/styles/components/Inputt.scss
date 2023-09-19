@@ -1,0 +1,185 @@
+.constant-placeholder{       
+    background: #FFFFFF;
+    border: 0.063rem solid #DEDEDE;
+    transition: border-color 0.3s ease;
+    border-radius: 0.313rem;
+    padding-top: 1.625rem;
+    padding-bottom: 1.625rem;
+    padding-left: 1.25rem;
+    max-width: 28.688rem;
+    padding-right: 1rem;
+    width: 100%;
+    @media (max-width: 500px){
+        padding-bottom: 0.8rem;
+        padding-top: 0.8rem;
+        padding-left: 0.8rem;
+    }
+    &__label{
+        font-family: 'Lexend';
+        font-weight: 400;
+        font-size: 1.063rem;
+        line-height: 1rem;
+        outline: none;
+        border: 2px solid white;
+        letter-spacing: -0.02em;
+        color: #6E768A;
+        transition: transform 0.3s ease;
+        @media (max-width: 500px){
+            font-size: 0.613rem;
+            line-height: unset;
+            padding-bottom: 0;
+        }
+    }
+    &__input-two{
+        font-family: 'Lexend';
+        font-weight: 400;
+        font-size: 1.063rem;
+        display: block;
+        outline: none;
+        border: 2px solid white;
+        line-height: 1.313rem;
+        letter-spacing: -0.02em;
+        transition: all ease-in-out 0.3s;
+        color: #1E1E1E;
+        display: none;
+        cursor: text;
+        width: 100%;
+        @media (max-width: 500px){
+            line-height: unset;
+            font-size: 0.8rem;
+        }
+    }
+    &__input-two::placeholder{
+        color: lightgray;
+    }
+    // &__error{
+    //     display: none;
+    //     color: red;
+    //     padding: 0.313rem;
+    //     padding-left: 0;
+    //     padding-bottom: 0;
+    //     font-size: 1rem;
+    //     font-family: 'Lexend';
+    // }
+   
+}
+
+
+.show-content{
+    padding-top: 0.938rem;
+    padding-bottom: 1rem;
+    @media (max-width: 500px){
+        padding-top: 0.538rem;
+        padding-bottom: 0.7rem;
+    }
+}
+
+.show-content__input-two{
+    display: block;
+    transition: ease-in-out 0.3s;
+    @media (max-width: 500px){
+        font-size: 0.6rem;
+    }
+}
+
+.show-content h5{
+    transform: translateY(-0.313rem);
+    font-size: 0.813rem;
+    @media (max-width: 500px){
+        transform: translateY(-0.19rem);
+        font-size: 0.5rem;
+    }
+}
+
+// .constant-placeholder:invalid{
+//     border: 3px solid red;
+// }
+
+// .show-content__input-two:invalid[focused="true"] ~ .constant-placeholder__error{
+//     display: block;
+// }
+
+// .constant-placeholder__input-two:invalid[focused="true"] ~ .constant-placeholder__error{
+//     display: block;
+// }
+
+// .constant-placeholder__input-two:invalid[focused="true"]{
+//     background-color: white;
+// }
+// .autocomplete-container {
+   
+//   }
+  
+//   .options-dropdown {
+//     position: absolute;
+//     max-width: 26rem;
+//     width: 100%;
+//     padding: 0.5rem 0;
+//     overflow: scroll;
+//     max-height: 25rem;
+//     background-color: white;
+//     border-right: 2px solid #DEDEDE;
+//     border-left: 2px solid #DEDEDE;
+//     border-bottom: 2px solid #DEDEDE;
+//     @media(max-width: 1024px){
+//         max-width: 20.5rem;
+//     }
+//     @media (max-width: 600px){
+//         max-width: 26rem;
+//     }
+//     @media (max-width: 500px){
+//         max-width: 23rem;
+//         width: 90%;
+//     }
+//   }
+  
+//   .option {
+//     padding: 0.131rem 0.5rem;
+//     font-size: 1.063rem;
+//     color: #1E1E1E;
+//     border-radius: 2px;
+//     font-family: 'Lexend';
+//     margin-bottom: 0.313rem;
+//     cursor: pointer;
+//     @media (max-width: 500px){
+//         font-size: 12px;
+//     }
+//   }
+
+//   .option:hover {
+//     background-color: #2E1A47;
+//     color: #ffffff;
+//   }
+  
+//   .loss{
+//     padding: 0.313rem 0;
+//     font-size: 1.063rem;
+//     border-radius: 2px;
+//     font-family: 'Lexend';
+//     color: #1E1E1E;
+//     text-align: center;
+//   }
+  
+//   .loss:hover{
+//     background-color: #2E1A47;
+//     color: #ffffff;
+//   }
+
+//   .loading{
+//     width: 20px;
+//     height: 20px;
+//     border: 2px solid #FFF;
+//     border-bottom-color: transparent;
+//     border-radius: 50%;
+//     display: inline-block;
+//     box-sizing: border-box;
+//     animation: rotation 1s linear infinite;
+//     @keyframes rotation {
+//         0% {
+//             transform: rotate(0deg);
+//         }
+//         100% {
+//             transform: rotate(360deg);
+//         }
+//     }
+// }

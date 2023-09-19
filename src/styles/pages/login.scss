@@ -1,0 +1,114 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 9.25rem;
+  background: #ffffff;
+  box-shadow: 0px 0.25rem 2.125rem rgba(0, 0, 0, 0.05);
+  border-radius: 0.625rem;
+  max-width: 34.938rem;
+  margin-bottom: 7rem;
+  padding: 1.625rem 0 2.5rem;
+  @media (max-width: 1024px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  @media (max-width: 600px) {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  @media (max-width: 500px) {
+    margin-bottom: 2.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.name {
+  color: #0096ff;
+  font-weight: 400;
+  font-size: 2.188rem;
+  text-align: center;
+  margin-top: 3.625rem;
+  margin-bottom: 1rem;
+  @media (max-width: 600px){
+    font-size: 1.8rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+.log {
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 1.2rem;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 2.063rem;
+  @media (max-width: 600px) {
+    font-size: 1rem;
+    line-height: 1.813rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+  }
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 28.688rem;
+  width: 100%;
+  height: 4.313rem;
+  color: white;
+  margin-top: 0.688rem;
+  background: #007BFF;
+  border-radius: 0.313rem;
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.063rem;
+  line-height: 1.313rem;
+  text-align: center;
+  outline: none;
+  border: 2px solid white;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  @media (max-width: 500px) {
+    height: 3rem;
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+}
+.loading {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
