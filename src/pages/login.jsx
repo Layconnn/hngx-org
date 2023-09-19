@@ -12,6 +12,8 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
 
   const allowedEmail = "user@example.com";
   const allowedPassword = "1Password";
@@ -36,14 +38,25 @@ function Login() {
         toast.error("Registration error!!");
       } finally {
         setIsLoading(false);
-        router('/Gallery')
+        router("/Gallery");
       }
-    } else if (email === '' && password === '') {
-      setIsLoading(false);
-      toast.warning("Please enter your credentials!")
     } else {
+      setEmailError("");
+      setPasswordError("");
+
+      if (email === "") {
+        setEmailError("Email is required.");
+      } else if (email !== allowedEmail) {
+        setEmailError("Invalid Email Address.");
+      }
+
+      if (password === "") {
+        setPasswordError("Password is required.");
+      } else if (password !== allowedPassword) {
+        setPasswordError("Invalid password.");
+      }
+
       setIsLoading(false);
-      toast.error("Invalid email or password!!");
     }
   };
 
@@ -53,21 +66,29 @@ function Login() {
         <h3 className="name">Gafar's Photo Gallery</h3>
         <h5 className="log">Log in to view the Gallery</h5>
         <form className="list" onSubmit={handleLogin}>
-          <Inputt
-            name="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            h5="Email"
-          />
+          <div className="err-input">
+            <Inputt
+              name="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              h5="Email"
+            />
+            {emailError && <div className="error-message">{emailError}</div>}
+          </div>
           <br />
-          <Inputt
-            name="password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            h5="Password"
-          />
+          <div className="err-input">
+            <Inputt
+              name="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              h5="Password"
+            />
+            {passwordError && (
+              <div className="error-message">{passwordError}</div>
+            )}
+          </div>
           <br />
           <button className="btn" type="submit">
             {isLoading ? <div className="loading"></div> : "Login"}
