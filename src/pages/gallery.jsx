@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import ImageData from "../components/data";
-import Card from "../components/Card";
-import SearchBar from "../components/SearchBar";
+import Card from "../components/card"
+import SearchBar from "../components/searchBar"
 import "../styles/pages/gallery.scss";
 import { toast, ToastContainer } from "react-toastify";
 
