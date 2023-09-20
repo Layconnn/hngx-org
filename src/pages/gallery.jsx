@@ -47,9 +47,9 @@ function Gallery() {
           <div className="spinner"></div>
         ) : (
           <>
-            <h5 className="gafaru">Gafar's Galler🔥</h5>
+            <h5 className="gafaru">Gafar's Gallery🔥</h5>
             <div className="navi">
-              <h5 className="gafar">Gafar's Galler🔥</h5>
+              <h5 className="gafar">Gafar's Gallery🔥</h5>
               <SearchBar
                 searchByTag={searchByTag}
                 setSearchByTag={setSearchByTag}
